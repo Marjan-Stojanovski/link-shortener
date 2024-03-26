@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/view/{short_url}', [App\Http\Controllers\ApiController::class, 'view']);
+Route::post('/store-link', [App\Http\Controllers\ApiController::class, 'store']);
+

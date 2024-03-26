@@ -1,14 +1,14 @@
-Task created using Laravel Homestead.
+Task created using Laravel Vagrant Homestead.
 
 
 
 Routes and views used 
 
-- <strong>Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');</strong>
+-Home page - Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
 returns to main menu with a list of all url-links in the database, along with the short links and number of how many times the link is visited
 
-- Route::get('/add-new-link', [App\Http\Controllers\HomeController::class, 'add_link'])->name('home.add.link');
+-Add link page - Route::get('/add-new-link', [App\Http\Controllers\HomeController::class, 'add_link'])->name('home.add.link');
 
 returns to the add link page, which has a simple input for submitting the url
 
